@@ -3,14 +3,29 @@ import { StyleSheet, Text, View } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { NavigationContainer } from "@react-navigation/native"
 import HomeScreen from "./components/HomeScreen"
+import CategoryScreen from './components/CategoryScreen';
+import QuestionScreen from './components/QuestionScreen';
+import ScoreScreen from './components/ScoreScreen';
 
 const Stack = createNativeStackNavigator()
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Navigator screenOptions={{
+        animationEnabled: false,
+        headerShown: false
+      }}>
+        <Stack.Screen name="Home"
+          component={HomeScreen}
+        />
+        <Stack.Screen name="Category"
+          component={CategoryScreen}
+          />
+          <Stack.Screen name="Questions"
+          component={QuestionScreen} />
+          <Stack.Screen name="Score"
+          component={ScoreScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
