@@ -19,7 +19,7 @@ export default function QuestionScreen({ route, navigation }) {
     ) : (
         setQuestionCounter(questionCounter += 1), setIncorrectCounter(incorrectCounter += 1))
 
-        {questionCounter === 10 && navigation.navigate("Score", {correct: correctCounter, incorrect: incorrectCounter})}
+        {questionCounter === 10 && navigation.navigate("Score", {correct: correctCounter, incorrect: incorrectCounter, questions: questions, random: random})}
 
     return (
         <SafeAreaView style={styles.container}>
@@ -36,7 +36,7 @@ export default function QuestionScreen({ route, navigation }) {
                     </View>
                     <View style={styles.answerContainer}>
                         {random.map((answer, idx) => (
-                            <TouchableOpacity onPress={() => handleClick(answer)} style={styles.answerButtons} key={idx}><Text>{answer.replace(/[^a-zA-Z0-9 ?%]/g, '').replace(/quot/g, '"').replace(/039/g, "'")}</Text></TouchableOpacity>
+                            <TouchableOpacity onPress={() => handleClick(answer)} style={styles.answerButtons} key={idx}><Text>{answer.replace(/[^a-zA-Z0-9 ?%]/g, '').replace(/quot/g, '"').replace(/039/g, "'").replace("amp", "and")}</Text></TouchableOpacity>
                         ))}
                     </View>
                     <View style={styles.counters}>

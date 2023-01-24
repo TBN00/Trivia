@@ -14,7 +14,6 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{
-        animationEnabled: false,
         headerShown: false
       }}>
         <Stack.Screen name="Home"

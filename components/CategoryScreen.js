@@ -33,7 +33,7 @@ export default function CategoryScreen({navigation}) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-    },
+        },
     categories: {
         justifyContent: 'center',
         alignContent: 'center',
