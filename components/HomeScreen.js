@@ -1,10 +1,11 @@
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native"
+import { View, Text, StyleSheet, TouchableOpacity, StatusBar } from "react-native"
 
 
 
 export default function HomeScreen({ navigation }) {
     return (
         <View style={styles.container}>
+            <StatusBar barStyle={"dark-content"} />
             <View style={styles.title}>
                 <Text style={styles.titleFont}>TRIVIA</Text>
             </View>

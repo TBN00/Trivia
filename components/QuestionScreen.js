@@ -58,15 +58,14 @@ const styles = StyleSheet.create({
         margin: 3,
         padding: 5,
         height: 40,
-        width: '45%',
+        width: '90%',
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 10,
     },
     answerContainer: {
-        flexDirection: 'row',
-        flexWrap: 'wrap',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     counters: {
         flexDirection: 'row',

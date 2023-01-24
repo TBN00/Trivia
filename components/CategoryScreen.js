@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, ActivityIndicator, TouchableOpacity, ScrollView } from "react-native"
+import { View, Text, StyleSheet, ActivityIndicator, TouchableOpacity, SafeAreaView } from "react-native"
 import { requestCategories } from "../Requests";
 import { useEffect, useState } from "react";
 
@@ -10,7 +10,7 @@ export default function CategoryScreen({navigation}) {
     }, [])
 
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             {categories.length === 0 ? (<ActivityIndicator />
             ) : (
                 <View>
@@ -26,15 +26,13 @@ export default function CategoryScreen({navigation}) {
                     </View>
                 </View>
             )}
-        </View>
+        </SafeAreaView>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: 80,
-        paddingBottom: 80,
     },
     categories: {
         justifyContent: 'center',
@@ -47,13 +45,13 @@ const styles = StyleSheet.create({
         margin: 3,
         padding: 5,
         height: 40,
-        width: '45%',
+        width: '48%',
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 10,
     },
     header: {
-        height: 200,
+        height: 80,
         justifyContent: 'center',
         alignItems: 'center'
     },

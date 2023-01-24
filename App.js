@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, LogBox } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { NavigationContainer } from "@react-navigation/native"
 import HomeScreen from "./components/HomeScreen"
@@ -8,6 +8,7 @@ import QuestionScreen from './components/QuestionScreen';
 import ScoreScreen from './components/ScoreScreen';
 
 const Stack = createNativeStackNavigator()
+LogBox.ignoreAllLogs()
 
 export default function App() {
   return (
